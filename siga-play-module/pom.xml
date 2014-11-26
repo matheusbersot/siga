@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>projeto-siga</groupId>
+        <artifactId>siga-play-module</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>jar</packaging>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>3.5.5-Final</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.maven-play-plugin.org.playframework</groupId>
+            <artifactId>play</artifactId>
+            <version>1.2.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet</groupId>
+            <artifactId>jboss-servlet-api_2.5_spec</artifactId>
+            <version>1.0.1.Final</version>
+            <scope>provided</scope>
+        </dependency>
+                
+      <dependency>
+          <groupId>ar.com.fdvs</groupId>
+          <artifactId>DynamicJasper</artifactId>
+          <version>3.0.6</version>
+      </dependency>
+                
+    </dependencies>
+
+
+<build>
+    <sourceDirectory>app</sourceDirectory>
+
+  <plugins>
+
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+
+            <configuration>
+
+              <outputDirectory>${basedir}/app</outputDirectory>
+
+              <!-- siga-base -->
+              <resources>          
+                <resource>
+                  <directory>../siga-base/src/main/java</directory>
+                  <excludes>
+                    <exclude>br/gov/jfrj/siga/model/ObjetoBase.java</exclude>
+                  </excludes>
+                </resource>
+
+              <!-- siga-cp (app) -->
+                <resource>
+                  <directory>../siga-cp/src/main/app</directory>
+                  <excludes>
+                    <exclude>br/gov/jfrj/siga/gi/**</exclude>
+                    <exclude>br/gov/jfrj/siga/relatorio/**</exclude>
+                    <exclude>br/gov/jfrj/siga/acesso/**</exclude>
+                  </excludes>
+                </resource>
+              <!-- siga-rel -->
+
+              <!-- siga-sinc-lib -->
+                <resource>
+                  <directory>../siga-sinc-lib/src/main/java</directory>
+                </resource>
+              </resources>              
+
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+
+	
+	 <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <version>2.3</version>
+      <configuration>
+                <descriptors>
+                    <descriptor>src/assembly/module-min.xml</descriptor>
+                </descriptors>
+              <formats>
+                <format>zip</format>
+              </formats>
+      </configuration>
+
+      <executions>
+            <execution>
+                <id>module-min</id>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+                <phase>package</phase>
+
+            </execution>
+      </executions>
+
+
+
+    </plugin>
+  
+	  
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+            <fork>true</fork>
+        </configuration>
+    </plugin>
+
+  </plugins>
+
+
+</build>
+</project>

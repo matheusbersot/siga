@@ -1,0 +1,57 @@
+#{extends 'main.html' /} #{set title:'Associação de tipo de atributo' /}
+
+<div class="gt-bd clearfix">
+	<div class="gt-content clearfix">
+		#{if associacao?.idConfiguracao}
+		<h2 class="gt-form-head">Associação Nº ${associacao?.hisIdIni}</h2>
+		#{/if} #{else}
+		<h2 class="gt-form-head">Cadastro de Associação</h2>
+		#{/else}
+
+		<div class="gt-form gt-content-box">
+			#{form @Application.gravarAssociacao()} #{if
+			associacao?.idConfiguracao} <input type="hidden"
+				name="associacao.idConfiguracao"
+				value="${associacao.idConfiguracao}"> #{/if}
+
+			<div class="gt-form-row gt-width-66">
+				<label>Item</label> #{selecao tipo:'item',
+				nome:'associacao.itemConfiguracaoUnitario',
+				value:associacao.itemConfiguracaoUnitario?.atual /}
+			</div>
+
+			<div class="gt-form-row gt-width-66">
+				<label>Serviço</label> #{selecao tipo:'acao',
+				nome:'associacao.acaoUnitaria', value:associacao.acaoUnitaria?.atual /}
+			</div>
+			<div class="gt-form-row gt-width-66">
+				<label>Tipo de atributo</label> #{select 'associacao.tipoAtributo',
+				items:models.SrTipoAtributo.listar(), labelProperty:'nomeTipoAtributo',
+				value:associacao.tipoAtributo?.atual?.idTipoAtributo, valueProperty:'idTipoAtributo'}
+				#{/select}
+				
+			</div>
+			<div class="gt-form-row">
+				<label>#{checkbox name:'associacao.atributoObrigatorio',
+					value:associacao.atributoObrigatorio /} Obrigatório</label>
+			</div>
+			<div class="gt-form-row">
+				#{if associacao.hisDtFim}
+					<input type="submit" value="Reativar"
+						class="gt-btn-medium gt-btn-left" />
+				#{/if}
+				#{else}
+					<input type="submit" value="Gravar"
+						class="gt-btn-medium gt-btn-left" />
+					<a href="@{Application.listarAssociacao}" class="gt-btn-medium gt-btn-left">Cancelar</a>
+					#{if associacao?.idConfiguracao} <input type="button" value="Desativar"
+						class="gt-btn-medium gt-btn-left"
+						onclick="location.href='@{Application.desativarAssociacao()}?id=${associacao.idConfiguracao}'" />
+				#{/if}
+				#{/else}
+			</div>
+			#{/form}
+		</div>
+	</div>
+</div>
+

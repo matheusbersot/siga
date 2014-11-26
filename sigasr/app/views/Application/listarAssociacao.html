@@ -1,0 +1,44 @@
+#{extends 'main.html' /} #{set title:'Associações de tipo de atributo' /}
+
+<div class="gt-bd clearfix">
+	<div class="gt-content">
+		<h2>Associações de Tipo de Atributo</h2>
+		<!-- content bomex -->
+		<div class="gt-content-box">
+			<table border="0" class="gt-table">
+				<thead>
+					<tr>
+						<th></th>
+						<th><i>Item &darr;</i></th>
+						<th>Ação</th>
+						<th>Tipo de atributo</th>
+						<th>Obrigatório</th>
+					</tr>
+				</thead>
+				<tbody>
+					#{list items:listaAssociacao, as:'assoc'}
+					<tr
+						onclick="javascript:window.location='@{Application.editarAssociacao(assoc.idConfiguracao)}'"
+						style="cursor: pointer;">
+						<td></td>
+						<td>${assoc.itemConfiguracaoUnitario?.atual?.tituloItemConfiguracao}</td>
+						<td>${assoc.acaoUnitaria?.atual?.tituloAcao}</td>
+						<td>${assoc.tipoAtributo?.nomeTipoAtributo}</td>
+						<td>${assoc.atributoObrigatorioString}</td>
+					</tr>
+					</a> #{/list}
+				</tbody>
+			</table>
+		</div>
+		<br/>
+		<!-- /content box -->
+		<div class="gt-table-buttons">
+		<a href="@{Application.editarAssociacao}" class="gt-btn-medium gt-btn-left">Cadastrar</a>
+		</div>
+
+	</div>
+</div>
+
+<br />
+<br />
+<br />
