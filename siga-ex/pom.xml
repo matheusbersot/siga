@@ -34,98 +34,98 @@
                 </executions>
             </plugin>
             
-			<plugin>
-		      <artifactId>maven-antrun-plugin</artifactId>
-		      <executions>
-		        <execution>
-		          <phase>process-classes</phase>
-		          <goals>
-		            <goal>run</goal>
-		          </goals>
-		        </execution>
-		      </executions>
-		      <configuration>
-		        <tasks>
-		            <taskdef name="instrument" classname="org.hibernate.tool.instrument.javassist.InstrumentTask">
-		                <classpath path="maven.compile.classpath"/>
-		                <classpath path="maven.runtime.classpath"/>
-		                <classpath path="maven.plugin.classpath"/>
-		            </taskdef>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <tasks>
+                        <taskdef name="instrument" classname="org.hibernate.tool.instrument.javassist.InstrumentTask">
+                            <classpath path="maven.compile.classpath"/>
+                            <classpath path="maven.runtime.classpath"/>
+                            <classpath path="maven.plugin.classpath"/>
+                        </taskdef>
 		
-		            <instrument verbose="true">
-		                <fileset dir="${project.build.outputDirectory}/br/gov/jfrj/siga/ex">
-		                    <include name="*.class"/>
-		                </fileset>
-		            </instrument>
-		        </tasks>
-		      </configuration>
-		      <dependencies>
-                <dependency>
-                    <groupId>javassist</groupId>
-                    <artifactId>javassist</artifactId>
-                    <version>3.12.1.GA</version>
-                    <scope>compile</scope>
-                </dependency>
-				<dependency>
-					<groupId>org.hibernate</groupId>
-					<artifactId>hibernate-core</artifactId>
-					<version>3.5.5-Final</version>
-					<scope>compile</scope>
-				</dependency>
-                  <dependency>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                    <version>1.6.1</version>
-                    <scope>compile</scope>
-                  </dependency>
+                        <instrument verbose="true">
+                            <fileset dir="${project.build.outputDirectory}/br/gov/jfrj/siga/ex">
+                                <include name="*.class"/>
+                            </fileset>
+                        </instrument>
+                    </tasks>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                        <version>3.12.1.GA</version>
+                        <scope>compile</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-core</artifactId>
+                        <version>3.5.5-Final</version>
+                        <scope>compile</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.6.1</version>
+                        <scope>compile</scope>
+                    </dependency>
 				
             				            
-            </dependencies>
-		    </plugin>            
-	    </plugins>
+                </dependencies>
+            </plugin>            
+        </plugins>
         <pluginManagement>
-        	<plugins>
-        		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-        		<plugin>
-        			<groupId>org.eclipse.m2e</groupId>
-        			<artifactId>lifecycle-mapping</artifactId>
-        			<version>1.0.0</version>
-        			<configuration>
-        				<lifecycleMappingMetadata>
-        					<pluginExecutions>
-        						<pluginExecution>
-        							<pluginExecutionFilter>
-        								<groupId>
-        									org.apache.maven.plugins
-        								</groupId>
-        								<artifactId>
-        									maven-antrun-plugin
-        								</artifactId>
-        								<versionRange>
-        									[1.3,)
-        								</versionRange>
-        								<goals>
-        									<goal>run</goal>
-        								</goals>
-        							</pluginExecutionFilter>
-        							<action>
-        								<execute></execute>
-        							</action>
-        						</pluginExecution>
-        					</pluginExecutions>
-        				</lifecycleMappingMetadata>
-        			</configuration>
-        		</plugin>
-        	</plugins>
+            <plugins>
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            org.apache.maven.plugins
+                                        </groupId>
+                                        <artifactId>
+                                            maven-antrun-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.3,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>run</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <execute></execute>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
         </pluginManagement>
     </build>
 
     <dependencies>
-		<dependency>
-			<groupId>org.mvel</groupId>
-			<artifactId>mvel2</artifactId>
-			<version>2.1.9.Final</version>
-		</dependency>
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>2.1.9.Final</version>
+        </dependency>
     
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -213,54 +213,54 @@
 
 
 
-	<profiles>
-		<profile>
-			<id>flyway</id>
-			<properties>
-				<maven.test.skip>true</maven.test.skip>
-				<maven.main.skip>true</maven.main.skip>
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.googlecode.flyway</groupId>
-						<artifactId>flyway-maven-plugin</artifactId>
-						<version>2.3.1</version>
-						<configuration>
-							<driver>oracle.jdbc.driver.OracleDriver</driver>
-							<url>jdbc:oracle:thin:@${server.ip}:49161:xe</url>
-							<user>system</user>
-							<password>oracle</password>
-							<schemas>
-								<schema>SIGA</schema>
-							</schemas>
-							<sqlMigrationPrefix>SIGA_UTF8_V</sqlMigrationPrefix>
-							<placeholderPrefix>flyway${</placeholderPrefix>
-							<locations>
-								<location>filesystem:src\main\resources</location>
-							</locations>
-						</configuration>
-						<executions>
-							<execution>
-								<phase>integration-test</phase>
-								<goals>
-									<goal>migrate</goal>
-								</goals>
+    <profiles>
+        <profile>
+            <id>flyway</id>
+            <properties>
+                <maven.test.skip>true</maven.test.skip>
+                <maven.main.skip>true</maven.main.skip>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.googlecode.flyway</groupId>
+                        <artifactId>flyway-maven-plugin</artifactId>
+                        <version>2.3.1</version>
+                        <configuration>
+                            <driver>oracle.jdbc.driver.OracleDriver</driver>
+                            <url>jdbc:oracle:thin:@${server.ip}:49161:xe</url>
+                            <user>system</user>
+                            <password>oracle</password>
+                            <schemas>
+                                <schema>SIGA</schema>
+                            </schemas>
+                            <sqlMigrationPrefix>SIGA_UTF8_V</sqlMigrationPrefix>
+                            <placeholderPrefix>flyway${</placeholderPrefix>
+                            <locations>
+                                <location>filesystem:src\main\resources</location>
+                            </locations>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>migrate</goal>
+                                </goals>
 	
-							</execution>
-						</executions>
-						<dependencies>
-							<dependency>
-								<groupId>com.oracle</groupId>
-								<artifactId>ojdbc6</artifactId>
-								<version>11.2.0.3.0</version>
-								<scope>runtime</scope>
-							</dependency>
-						</dependencies>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.oracle</groupId>
+                                <artifactId>ojdbc6</artifactId>
+                                <version>11.2.0.3.0</version>
+                                <scope>runtime</scope>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
