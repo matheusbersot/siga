@@ -70,6 +70,32 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>                    
+                    <webResources>                       
+                        <resource>
+                            <directory>../libraries</directory>
+                            <includes>
+                                <include>hibernate3.jar</include>
+                                <include>hibernate-annotations-3.5.5-Final.jar</include>
+                                <include>hibernate-c3p0-3.3.1.GA.jar</include>
+                                <include>hibernate-commons-annotations-3.2.0.Final.jar</include>
+                                <include>hibernate-entitymanager.jar</include>
+                                <include>hibernate-search-3.1.1.GA.jar</include>
+                                <include>siga-ext.jar</include>
+                                <include>pd4ml_demo.jar</include>
+                                <include>pd4ml_tl_demo.jar</include>
+                                <include>XmlSchema-1.4.5.jar</include>
+                                <include>iText-2.1.5.jar</include>
+                                <include>iText-rtf-2.1.5.jar</include>
+                            </includes>                            
+                            <targetPath>WEB-INF/lib</targetPath>
+                        </resource>
+                    </webResources>  
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

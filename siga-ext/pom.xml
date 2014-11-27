@@ -34,7 +34,7 @@
                                     <type>${project.packaging}</type>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>../target</outputDirectory>
+                            <outputDirectory>../libraries</outputDirectory>
                             <stripVersion>true</stripVersion>
                         </configuration>
                     </execution>

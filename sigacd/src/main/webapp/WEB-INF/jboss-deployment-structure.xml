@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.1">
+    <deployment>
+        <dependencies>
+            <module name="org.jboss.ws.native.jbossws-native-core" />								
+            <module name="org.codehaus.jettison" />
+            <module name="org.springframework" />
+            <module name="org.apache.xml-resolver" /> 
+            <module name="org.apache.neethi" /> 
+
+            <module name="javax.wsdl4j.api" />
+            <module name="javax.xml.bind" />    
+        </dependencies>
+    </deployment>	
+</jboss-deployment-structure>

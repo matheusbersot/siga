@@ -42,6 +42,21 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>                    
+                    <webResources>                       
+                        <resource>
+                            <directory>../libraries</directory>
+                            <includes>
+                                <include>XmlSchema-1.4.5.jar</include>
+                            </includes>                            
+                            <targetPath>WEB-INF/lib</targetPath>
+                        </resource>
+                    </webResources>  
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

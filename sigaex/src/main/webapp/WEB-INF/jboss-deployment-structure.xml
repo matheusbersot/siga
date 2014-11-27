@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.1">
+    <deployment>		 
+        <dependencies>
+            <module name="br.gov.jfrj.siga.configuracao" />
+            <module name="org.bouncycastle" />
+            <module name="com.oracle" />
+            <module name="com.opensymphony" /> 
+                        
+            <module name="org.codehaus.jettison" />
+            <module name="org.springframework" />
+            <module name="org.apache.xml-resolver" /> 
+            <module name="org.apache.neethi" />  
+
+            <module name="nl.captcha" />
+            <module name="dwr" />
+            <module name="net.sf.jasperreports" />            
+            
+            <module name="javax.xml.bind" />    
+            <module name="javax.wsdl4j.api" />
+        </dependencies>		
+    </deployment>	
+</jboss-deployment-structure>

@@ -43,25 +43,37 @@
                 </executions>
             </plugin>
 
-              <plugin>
+            <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                  <packagingExcludes>
-                    WEB-INF/lib/siga-ext-*.jar
-                  </packagingExcludes>
-		          <webResources>
-        			<resource>
-						<directory>./src/main/webapp/paginas/entradas</directory>
-						<filtering>true</filtering>
-						<includes>
-							<include>login.jsp</include>
-						</includes>
-						<targetPath>/paginas/entradas</targetPath>
-        			</resource>
-		          </webResources>
-                  
+                    <packagingExcludes>
+                        WEB-INF/lib/siga-ext-*.jar
+                    </packagingExcludes>
+                    <webResources>
+                        <resource>
+                            <directory>./src/main/webapp/paginas/entradas</directory>
+                            <filtering>true</filtering>
+                            <includes>
+                                <include>login.jsp</include>
+                            </includes>
+                            <targetPath>/paginas/entradas</targetPath>
+                        </resource>
+                        <resource>
+                            <directory>../libraries</directory>
+                            <includes>
+                                <include>hibernate3.jar</include>
+                                <include>hibernate-annotations-3.5.5-Final.jar</include>
+                                <include>hibernate-c3p0-3.3.1.GA.jar</include>
+                                <include>hibernate-commons-annotations-3.2.0.Final.jar</include>
+                                <include>hibernate-entitymanager.jar</include>
+                                <include>hibernate-search-3.1.1.GA.jar</include>
+                                <include>XmlSchema-1.4.5.jar</include>
+                            </includes>                            
+                            <targetPath>WEB-INF/lib</targetPath>
+                        </resource>
+                    </webResources>  
                 </configuration>
-              </plugin>
+            </plugin>
             
         </plugins>
     </build>
@@ -69,20 +81,20 @@
 
     <dependencies>
     
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>6.0.32</version>
-			<scope>provided</scope>
-		</dependency>        
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>6.0.32</version>
+            <scope>provided</scope>
+        </dependency>        
 
-		<dependency>
+        <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-bundle</artifactId>
             <exclusions>
