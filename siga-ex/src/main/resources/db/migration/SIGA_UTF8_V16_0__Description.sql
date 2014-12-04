@@ -1,3 +1,5 @@
+SET DEFINE OFF
+
 create or replace
 Trigger SIGA.EX_DOCUMENTO_BLOCK
 Before Update or Delete on SIGA.EX_DOCUMENTO

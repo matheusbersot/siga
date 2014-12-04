@@ -26,5 +26,7 @@
             <artifactId>siga-ex</artifactId>
         </dependency>
     </dependencies>
-
+    <properties>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+    </properties>
 </project>

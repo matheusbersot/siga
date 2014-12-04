@@ -24,7 +24,6 @@ sigapp/bin/
 sigapp/precompiled/
 sigagc/bin/
 sigagc/precompiled/
-sigapp/precompiled/
 sigasr/tmp/
 sigawf/WebContent/WEB-INF/classes/
 siga-base/build/
@@ -52,8 +51,6 @@ sigari/precompiled/templates/app/views/Application/anexar.html
 sigari/precompiled/
 
 sigasr/sigasr-start.launch
-sigasr/lib
-sigasr/modules
 sigasr/eclipse
 
 sigagc/sigagc-start.launch
@@ -83,3 +80,4 @@ sigari/modules/
 sigari/eclipse/sigari-start.launch.template
 *.rej
 siga-dump/bin/pom.xml
+/.metadata/
