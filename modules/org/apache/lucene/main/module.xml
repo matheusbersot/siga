@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module xmlns="urn:jboss:module:1.1" name="org.apache.lucene">
+
+    <resources>
+    <resource-root path="lucene-core-2.4.1.jar"/> 
+    <resource-root path="lucene-analyzers-2.4.1.jar"/> 
+    </resources>
+
+   <dependencies>
+        <module name="javax.api"/>
+   </dependencies>        
+
+</module>

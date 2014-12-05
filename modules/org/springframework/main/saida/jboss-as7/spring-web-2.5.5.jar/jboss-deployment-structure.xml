@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<jboss-deployment-structure>
+  <deployment>
+     <dependencies>
+        <module name="javax.el.api"/>
+        <module name="javax.faces.api"/>
+        <module name="javax.jws.api"/>
+        <module name="javax.servlet.api"/>
+        <module name="javax.servlet.jsp.api"/>
+        <module name="javax.servlet.jstl.api"/>
+        <module name="javax.xml.rpc.api"/>
+        <module name="javax.xml.soap.api"/>
+        <module name="javax.xml.ws.api"/>
+        <module name="org.apache.log4j"/>
+        <module name="org.slf4j.jcl-over-slf4j"/>
+        <module name="system"/>
+     </dependencies>
+  </deployment>
+</jboss-deployment-structure>

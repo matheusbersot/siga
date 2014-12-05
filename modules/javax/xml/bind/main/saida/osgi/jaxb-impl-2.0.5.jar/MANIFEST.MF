@@ -1,0 +1,101 @@
+Manifest-Version: 1.0
+Implementation-Title: JAXB Reference Implementation 
+Implementation-Version: 2.0.5
+Specification-Vendor: Sun Microsystems, Inc.
+Class-Path: jaxb-api.jar activation.jar jsr173_1.0_api.jar jaxb1-impl.
+ jar
+Created-By: 1.5.0-b64 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.6.5
+Implementation-Vendor: Sun Microsystems, Inc.
+Implementation-Vendor-Id: com.sun
+Specification-Title: Java Architecture for XML Binding
+Specification-Version: 2.0
+Extension-Name: com.sun.xml.bind
+Build-Id: b02
+
+Name: com.sun.xml.bind.v2.runtime
+Implementation-Version: 2.0.5-b02-fcs
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.sun.xml.bind.v2.model.impl
+Bundle-Description: jaxb-impl-2.0.5
+Bundle-Name: jaxb-impl-2.0.5
+Bundle-Version: 2.0
+Export-Package: com.sun.istack,com.sun.xml.bind;uses:="com.sun.xml.bin
+ d.v2",com.sun.xml.bind.annotation,com.sun.xml.bind.api;uses:="com.sun
+ .istack,com.sun.xml.bind.api.impl,com.sun.xml.bind.v2.model.nav,com.s
+ un.xml.bind.v2.runtime,com.sun.xml.bind.v2.runtime.unmarshaller",com.
+ sun.xml.bind.api.impl,com.sun.xml.bind.marshaller;uses:="com.sun.ista
+ ck,com.sun.xml.bind.util",com.sun.xml.bind.unmarshaller;uses:="com.su
+ n.xml.bind.v2.runtime.unmarshaller",com.sun.xml.bind.util;uses:="com.
+ sun.xml.bind",com.sun.xml.bind.v2;uses:="com.sun.istack,com.sun.xml.b
+ ind,com.sun.xml.bind.v2.runtime",com.sun.xml.bind.v2.bytecode;uses:="
+ com.sun.xml.bind",com.sun.xml.bind.v2.model.annotation;uses:="com.sun
+ .xml.bind.v2.model.core,com.sun.xml.bind.v2.model.nav,com.sun.xml.bin
+ d.v2.runtime",com.sun.xml.bind.v2.model.core;uses:="com.sun.istack,co
+ m.sun.xml.bind.v2.model.annotation,com.sun.xml.bind.v2.model.impl,com
+ .sun.xml.bind.v2.model.nav,com.sun.xml.bind.v2.runtime",com.sun.xml.b
+ ind.v2.model.impl;uses:="com.sun.istack,com.sun.xml.bind,com.sun.xml.
+ bind.annotation,com.sun.xml.bind.api,com.sun.xml.bind.api.impl,com.su
+ n.xml.bind.v2,com.sun.xml.bind.v2.model.annotation,com.sun.xml.bind.v
+ 2.model.core,com.sun.xml.bind.v2.model.nav,com.sun.xml.bind.v2.model.
+ runtime,com.sun.xml.bind.v2.runtime,com.sun.xml.bind.v2.runtime.outpu
+ t,com.sun.xml.bind.v2.runtime.reflect,com.sun.xml.bind.v2.runtime.unm
+ arshaller,com.sun.xml.bind.v2.util",com.sun.xml.bind.v2.model.nav;use
+ s:="com.sun.xml.bind.v2.runtime",com.sun.xml.bind.v2.model.runtime;us
+ es:="com.sun.xml.bind.v2.model.core,com.sun.xml.bind.v2.model.nav,com
+ .sun.xml.bind.v2.runtime,com.sun.xml.bind.v2.runtime.reflect",com.sun
+ .xml.bind.v2.runtime;uses:="com.sun.istack,com.sun.xml.bind,com.sun.x
+ ml.bind.api,com.sun.xml.bind.marshaller,com.sun.xml.bind.unmarshaller
+ ,com.sun.xml.bind.util,com.sun.xml.bind.v2,com.sun.xml.bind.v2.model.
+ annotation,com.sun.xml.bind.v2.model.core,com.sun.xml.bind.v2.model.i
+ mpl,com.sun.xml.bind.v2.model.nav,com.sun.xml.bind.v2.model.runtime,c
+ om.sun.xml.bind.v2.runtime.output,com.sun.xml.bind.v2.runtime.propert
+ y,com.sun.xml.bind.v2.runtime.reflect,com.sun.xml.bind.v2.runtime.unm
+ arshaller,com.sun.xml.bind.v2.schemagen,com.sun.xml.bind.v2.util",com
+ .sun.xml.bind.v2.runtime.output;uses:="com.sun.istack,com.sun.xml.bin
+ d,com.sun.xml.bind.marshaller,com.sun.xml.bind.util,com.sun.xml.bind.
+ v2.runtime,com.sun.xml.bind.v2.runtime.unmarshaller,com.sun.xml.fasti
+ nfoset.stax,org.jvnet.staxex",com.sun.xml.bind.v2.runtime.property;us
+ es:="com.sun.xml.bind.api,com.sun.xml.bind.v2,com.sun.xml.bind.v2.mod
+ el.core,com.sun.xml.bind.v2.model.nav,com.sun.xml.bind.v2.model.runti
+ me,com.sun.xml.bind.v2.runtime,com.sun.xml.bind.v2.runtime.reflect,co
+ m.sun.xml.bind.v2.runtime.unmarshaller,com.sun.xml.bind.v2.util",com.
+ sun.xml.bind.v2.runtime.reflect;uses:="com.sun.istack,com.sun.xml.bin
+ d,com.sun.xml.bind.api,com.sun.xml.bind.v2,com.sun.xml.bind.v2.model.
+ core,com.sun.xml.bind.v2.model.impl,com.sun.xml.bind.v2.model.nav,com
+ .sun.xml.bind.v2.model.runtime,com.sun.xml.bind.v2.runtime,com.sun.xm
+ l.bind.v2.runtime.reflect.opt,com.sun.xml.bind.v2.runtime.unmarshalle
+ r",com.sun.xml.bind.v2.runtime.reflect.opt;uses:="com.sun.xml.bind,co
+ m.sun.xml.bind.api,com.sun.xml.bind.v2.bytecode,com.sun.xml.bind.v2.m
+ odel.core,com.sun.xml.bind.v2.model.runtime,com.sun.xml.bind.v2.runti
+ me,com.sun.xml.bind.v2.runtime.reflect",com.sun.xml.bind.v2.runtime.u
+ nmarshaller;uses:="com.sun.istack,com.sun.xml.bind,com.sun.xml.bind.a
+ pi,com.sun.xml.bind.unmarshaller,com.sun.xml.bind.util,com.sun.xml.bi
+ nd.v2,com.sun.xml.bind.v2.model.core,com.sun.xml.bind.v2.runtime,com.
+ sun.xml.bind.v2.runtime.output,com.sun.xml.bind.v2.runtime.property,c
+ om.sun.xml.bind.v2.runtime.reflect,com.sun.xml.bind.v2.util,com.sun.x
+ ml.fastinfoset.sax,com.sun.xml.fastinfoset.stax,org.jvnet.staxex",com
+ .sun.xml.bind.v2.schemagen;uses:="com.sun.istack,com.sun.xml.bind,com
+ .sun.xml.bind.api,com.sun.xml.bind.v2,com.sun.xml.bind.v2.model.core,
+ com.sun.xml.bind.v2.model.nav,com.sun.xml.bind.v2.runtime,com.sun.xml
+ .bind.v2.schemagen.xmlschema,com.sun.xml.txw2,com.sun.xml.txw2.output
+ ",com.sun.xml.bind.v2.schemagen.xmlschema;uses:="com.sun.xml.txw2,com
+ .sun.xml.txw2.annotation",com.sun.xml.bind.v2.util;uses:="com.sun.xml
+ .bind.v2.runtime,com.sun.xml.bind.v2.runtime.unmarshaller",com.sun.xm
+ l.txw2;uses:="com.sun.xml.txw2.annotation,com.sun.xml.txw2.output",co
+ m.sun.xml.txw2.annotation,com.sun.xml.txw2.output;uses:="com.sun.xml.
+ txw2"
+Import-Package: com.sun.xml.fastinfoset.sax,com.sun.xml.fastinfoset.st
+ ax,java.awt,java.awt.image,java.beans,java.io,java.lang,java.lang.ann
+ otation,java.lang.ref,java.lang.reflect,java.math,java.net,java.nio.c
+ harset,java.security,java.text,java.util,java.util.concurrent,java.ut
+ il.logging,javax.activation,javax.imageio,javax.imageio.stream,javax.
+ xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters
+ ,javax.xml.bind.attachment,javax.xml.bind.helpers,javax.xml.datatype,
+ javax.xml.namespace,javax.xml.parsers,javax.xml.stream,javax.xml.stre
+ am.events,javax.xml.transform,javax.xml.transform.dom,javax.xml.trans
+ form.sax,javax.xml.transform.stream,javax.xml.validation,org.jvnet.st
+ axex,org.w3c.dom,org.xml.sax,org.xml.sax.ext,org.xml.sax.helpers

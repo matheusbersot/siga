@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module xmlns="urn:jboss:module:1.1" name="org.springframework">
+
+    <resources>
+    <resource-root path="spring-web-2.5.5.jar"/> 
+    <resource-root path="spring-core-2.5.5.jar"/> 
+    <resource-root path="spring-beans-2.5.5.jar"/> 
+    <resource-root path="spring-context-2.5.5.jar"/> 
+    </resources>
+
+   <dependencies>
+        <module name="javax.annotation.api"/>
+        <module name="javax.ejb.api"/>
+        <module name="javax.el.api"/>
+        <module name="javax.faces.api"/>
+        <module name="javax.interceptor.api"/>
+        <module name="javax.jms.api"/>
+        <module name="javax.jws.api"/>
+        <module name="javax.persistence.api"/>
+        <module name="javax.rmi.api"/>
+        <module name="javax.servlet.api"/>
+        <module name="javax.servlet.jsp.api"/>
+        <module name="javax.servlet.jstl.api"/>
+        <module name="javax.xml.rpc.api"/>
+        <module name="javax.xml.soap.api"/>
+        <module name="javax.xml.ws.api"/>
+
+        <module name="org.apache.commons.collections"/>
+        <module name="org.apache.log4j"/>
+        <module name="org.jacorb"/>
+        <module name="org.slf4j.jcl-over-slf4j"/>
+
+        <module name="javax.api"/>
+   </dependencies>        
+
+</module>

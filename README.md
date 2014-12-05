@@ -1,7 +1,6 @@
-siga
-====
+O Projeto SIGA é a versão de código aberto (GPL) do Sistema Integrado de Gestão Administrativa - SIGA, desenvolvido pela Seção Judiciária do Rio de Janeiro - SJRJ. 
 
-Projeto SIGA-UFF ( Projeto Fonte: https://github.com/projeto-siga/siga ) 
+Fonte: https://github.com/projeto-siga/siga e https://code.google.com/p/projeto-siga/
 
 Utilizar o jdk 6 para compilar o projeto. Alguns erros foram encontrados ao tentar compilar o projeto com o jdk 7.
 

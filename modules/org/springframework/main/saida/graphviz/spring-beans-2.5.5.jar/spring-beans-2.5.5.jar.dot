@@ -1,0 +1,4 @@
+digraph spring_beans_2_5_5_dependencies {
+  node [shape = box, fontsize=10.0];
+  spring_beans_2_5_5 -> spring_core_2_5_5;
+}

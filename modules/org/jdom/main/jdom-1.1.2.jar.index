@@ -1,0 +1,10 @@
+
+org/jdom/output
+org/jdom/filter
+org/jdom/xpath
+org/jdom/input
+org/jdom/adapters
+org
+META-INF
+org/jdom/transform
+org/jdom

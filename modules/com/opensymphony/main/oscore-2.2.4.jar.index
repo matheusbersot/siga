@@ -1,0 +1,13 @@
+
+com
+com/opensymphony
+com/opensymphony/module
+com/opensymphony/module/random
+com/opensymphony/module/sequence
+com/opensymphony/provider
+com/opensymphony/provider/bean
+com/opensymphony/provider/log
+com/opensymphony/provider/xmlprinter
+com/opensymphony/provider/xpath
+com/opensymphony/util
+META-INF

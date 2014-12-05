@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module xmlns="urn:jboss:module:1.1" name="nl.captcha">
+
+    <resources>
+    <resource-root path="simplecaptcha-1.2.1.jar"/>        
+    </resources>
+
+   <dependencies>
+        <module name="javax.servlet.api"/>
+        <module name="javax.api"/>
+   </dependencies>        
+
+</module>
